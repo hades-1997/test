@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"  href="./animate/animate.css"/>
+    <link rel="stylesheet" href="./scss/style.css">
+    <script src="./javacript/zoomin.js"></script>
+    <title>Website finecimes by Asuzac</title>
+</head>
+<body>
+    <header>
+        <!-- start icon top bar -->
+        <div class="top">
+            <div class="container topbar">
+                <ul class="nav navbar-nav navbar-right ">
+                    <li class="icon_search"><a href="#Modal" data-toggle="modal">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </a>
+                        <div class="modal fade" id="Modal" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                        <h4 class="modal-title">Please Enter Keyword Search</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="input-group">
+                                                <input id="text" type="text" class="form-control" name="search"
+                                                    placeholder="search">
+                                                <span class="input-group-addon"></span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default">Search</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="icon_product"><a href="#" data-toggle="modal" data-target="#cart">
+                            <span class="glyphicon glyphicon-shopping-cart"><span class="badge">5</span></span>
+                        </a>
+                        <!-- model -->
+                        <div class="modal fade" id="cart" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="show-cart table">
+
+                                        </table>
+                                        <div>Total price: $<span class="total-cart"></span></div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Order now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- start menu  -->
+        <div class="row">
+            <div class="col-6">
+            </div>
+        </div>
+        <nav class="navbar navbar-primary">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-logo">
+                        <div class="logo-navar">
+                            <a class="logo" href="#">
+                                <img src="./images/logo/fc(8m).png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav ">
+                                <li class="active"><a href="#" style="color: white;">Home</a></li>
+                                <li><a href="#" style="color: white;">About Us</a></li>
+                                <li><a href="#" style="color: white;">Products</a></li>
+                                <li><a href="#" style="color: white;">fields</a></li>
+                                <li><a href="#" style="color: white;">News</a></li>
+                                <li><a href="#" style="color: white;">recruitment</a></li>
+                                <li><a href="#" style="color: white;">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- slider -->
+    <div class="container-fuild slider">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="./images/background/banner-fc-2.jpg" alt="Los Angeles" style="width:100%;">
+                </div>
+                <div class="item">
+                    <img src="./images/background/banner.jpg" alt="Chicago" style="width:100%;">
+                </div>
+                <!-- Left and right controls -->
+                <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a> -->
+            </div>
+        </div>
+    </div>
+    <!-- contact--us -->
+    <div class="container">
+        <div class="row content-contact">
+            <div class="col-md-6 content-us wow slideInLeft" data-wow-duration="2s">
+                <p>
+                    Asuzac Fine Cecarmics
+                </p>
+                <h3 >
+                    THE STORY ABOUT US
+                </h3>
+                <p style="padding-top: 20px;">
+                    <b>ASUZAC</b> is a company with Japanese technology standards. Together with a team of skilled
+                    engineers, process system - standards controlled by Japanese standards, we always bring the best
+                    values ​​for your Customers. Meeting the most rigorous future needs of the global industry .... In
+                    addition,<b>ASUZAC</b>  applies ISO 9001 and ISO 14001 standards to production. harmonious coordination
+                    between product quality, company benefits and friendliness with the surrounding environment.
+                </p>
+                <div class="btn-group btn-group-justified" style="margin: 0; border-radius: 0px;">
+                    <a href="#" class="btn btn-default"><img src="./images/icon/item-btn-arrow02-pc.png" alt="">
+                        DETAIL</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row contact  wow slideInRight" data-wow-duration="2s" >
+                    <div class="col-md-1 dot">
+                        <img src="./images/contactus/section_about_dot.png" alt="">
+                    </div>
+                    <div class="col-sm-11">
+                        <img src="./images/contactus/_14A0579.JPG" alt="">
+                    </div>
+                </div>
+                <div class="dot-circle wow bounce" data-wow-duration="2s">
+                    <div>
+                        <a class="dot1" href="" data-toggle="tooltip" data-placement="right" title="WAFER TRANSFER"></a>
+                    </div>
+                    <div class="">
+                        <a class="dot2" href="" data-toggle="tooltip" data-placement="left"
+                            title="MULTI-DIFFERENT PRODUCTS"></a>
+                    </div>
+                    <div class="">
+                        <a class="dot3" href="" data-toggle="tooltip" data-placement="left" title="LIQUID SCREEN"></a>
+                    </div>
+                    <div class="">
+                        <a class="dot4" href="" data-toggle="tooltip" data-placement="left"
+                            title="OPTICAL SCREEN - Semiconductor"></a>
+                    </div>
+                </div>
+                <div class="search-img wow bounce" data-wow-duration="2s">
+                    <p>
+                        Click on the dot to search for the product
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- features -->
+    <div class="container-fluid solution" id="session4">
+        <div class="row row-solution">
+            <div class="col-sm-4 col5-solution">
+                <img src="./images/solution/solution.png" alt="">
+            </div>
+            <div class="col-sm-8 content-solution">
+                <div class="row row-content-solution">
+                    <div class="col-sm-8 col12-content-solution">
+                        <p>salient features</p>
+                        <h2>Product Characteristics At Asuzac</h2>
+                        <div class="row features">
+                            <div class="media wow fadeInRightBig">
+                                <div class="media-left">
+                                    <img src="./images/solution/28sanpham1_4_L.jpg" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Resistance to wear - deformation</h4>
+                                    <p>The clamp on a ceramic base table has low porosity and fixes the product by
+                                        vacuum absorption, resistance to wear and deformation.</p>
+                                </div>
+                            </div>
+                            <div class="media wow fadeInRightBig">
+                                <div class="media-left">
+                                    <img src="./images/solution/sanpham3_1_L.jpg" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Resistance to electrical - magnetic contamination</h4>
+                                    <p>Electronic ceramics made from Aluminum Oxide, which are insulating and wear
+                                        resistant, are the ideal solution for the industry.</p>
+                                </div>
+                            </div>
+                            <div class="media wow fadeInRightBig">
+                                <div class="media-left">
+                                    <img src="./images/solution/IMG_2126_rs_L.jpg" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Resistant to heat and chemicals</h4>
+                                    <p> Electronic ceramics have stable chemical properties, and are anti-wear and
+                                        insulating materials.</p>
+                                </div>
+                            </div>
+                            <div class="media wow fadeInRightBig">
+                                <div class="media-left">
+                                    <img src="./images/solution/technology-teflon.jpg" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">High applicability</h4>
+                                    <p> Products using Electronic Ceramics in the semiconductor industry such as: LED
+                                        display, liquid crystal (LCD), automatic systems, ...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row work-time">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-md-2" style="padding-right: 0;">
+                                        <img src="./images/solution/wall-clock.svg" alt=""></div>
+                                    <div class="col-md-10" style="padding-left: 0;">
+                                        <h3>work time</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        <p>
+                                            <span> T2 - T6</span>
+                                            <span> 7:15 - 16:00</span>
+                                        </p>
+                                        <p>
+                                            <span> T7</span>
+                                            <span> 7:15 - 16:00</span>
+                                        </p>
+                                        <p>
+                                            <span>CN</span>
+                                            <span>Nghỉ</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- product -->
+    <div class="container-fluid product">
+        <!-- <h3>PRODUCT</h3> -->
+        <div class="reponsive-pc">
+            <div class="col-md-6 content-product  wow bounce" data-wow-duration="2s">
+                <h3>MULTI-DIFFERENT PRODUCTS</h3>
+                <p>
+                    Use aluminum oxide as a substitute for metal because it can withstand wear and electrical
+                    insulation. We are pleased to accept your order with only one product from the smallest details to
+                    normal sizes.
+                </p>
+                <div class="btn-group btn-group-justified" style="margin: 0; border-radius: 0px;">
+                    <a href="#" class="btn btn-default"><img src="./images/icon/item-btn-arrow02-pc.png" alt="">
+                        DETAIL</a>
+                </div>
+            </div>
+            <!-- images product  -->
+            <div class="col-md-6 product-img">
+                <img id="myimage" src="./images/product/_14A0545.JPG" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <!-- images product  -->
+            <div class="col-md-6 product-img-left">
+                <img src="./images/product/_14A0545.JPG" alt="">
+            </div>
+            <!-- content -->
+            <div class="col-md-6 content-product  wow bounce" data-wow-duration="2s">
+                <h3>LIQUID SCREEN</h3>
+                <p>
+                    Use aluminum oxide as a substitute for metal because it can withstand wear and electrical
+                    insulation. We are pleased to accept your order with only one product from the smallest details to
+                    normal sizes.
+                </p>
+                <div class="btn-group btn-group-justified" style="margin: 0; border-radius: 0px;">
+                    <a href="#" class="btn btn-default"><img src="./images/icon/item-btn-arrow02-pc.png" alt="">
+                        DETAIL</a>
+                </div>
+            </div>
+        </div>
+                <!-- ads images -->
+                <div class="col-md-12 ads-img">
+                    <img src="./images/product/adsbanner.png" alt="">
+                </div>
+        <div class="row">
+            <!-- content -->
+            <div class="col-md-6 content-product  wow bounce" data-wow-duration="2s">
+                <h3>WAFER TRANSFER</h3>
+                <p>
+                    Use aluminum oxide as a substitute for metal because it can withstand wear and electrical
+                    insulation. We are pleased to accept your order with only one product from the smallest details to
+                    normal sizes.
+                </p>
+                <div class="btn-group btn-group-justified" style="margin: 0; border-radius: 0px;">
+                    <a href="#" class="btn btn-default"><img src="./images/icon/item-btn-arrow02-pc.png" alt="">
+                        DETAIL</a>
+                </div>
+            </div>
+            <!-- images product  -->
+            <div class="col-md-6 product-img-right">
+                <img src="./images/product/_14A0584.JPG" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <!-- images product  -->
+            <div class="col-md-6 product-img-optical">
+                <img src="./images/product/_14A0555.JPG" alt="">
+            </div>
+            <!-- content -->
+            <div class="col-md-6 content-product  wow bounce" data-wow-duration="2s">
+                <h3>OPTICAL SCREEN - Semiconductor</h3>
+                <p>
+                    Use aluminum oxide as a substitute for metal because it can withstand wear and electrical
+                    insulation. We are pleased to accept your order with only one product from the smallest details to
+                    normal sizes.
+                </p>
+                <div class="btn-group btn-group-justified" style="margin: 0; border-radius: 0px;">
+                    <a href="#" class="btn btn-default"><img src="./images/icon/item-btn-arrow02-pc.png" alt="">
+                        DETAIL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- mo the company -->
+    <!-- <div class="container-fluid company"
+            style="background-image: url('./images/background/asuzac-fc-2.jpg');">
+            <div class="container">
+                <div class="row warp">
+                    <div class="col-sm-12 aboutus-content">
+                        <p class="company-content wow bounceIn" data-wow-duration="2s" >Chúng tôi có hơn 15 năm tại Việt Nam
+                            và 40 năm hoạt động trên toàn thế giới về ngành hàng gốm sứ công nghiệp Fine Ceramic.
+                        </p>
+                        <div class="btn-aboutus  wow bounceIn" data-wow-duration="2s" ><a href="/aboutus.html">Ghé Thăm Doanh Nghiệp Của Chúng Tôi  <span class="glyphicon glyphicon-share-alt"></span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!-- dong the company -->
+    <!-- news and images graller -->
+    <div class="container-fluid new-full">
+        <div class="container news-graller">
+            <div class="row">
+                <div class="col-md-6 news">
+                    <h2>
+                        NEWS
+                    </h2>
+                    <div class="row news-content">
+                        <div class="col-md-4 news-img">
+                            <img src="./images/news/dsc00341.jpg" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Sản xuất thành công sản phẩm Fine Ceramic dày 0.1mm</h3>
+                            <div class="date">04 <span>Tháng 09</span></div>
+                            <p>Nhằm đáp ứng cho yêu cầu của một đơn hàng đặc biệt từ Khách hàng, ASUZAC đã tiến hành
+                                nghiên cứu phương thức sản xuất sản phẩm Ceramics với độ dày chỉ 0.1mm.</p>
+                        </div>
+
+                    </div>
+                    <div class="row news-content">
+                        <div class="col-md-4 news-img">
+                            <img src="./images/news/dsc00341.jpg" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Sản xuất thành công sản phẩm Fine Ceramic dày 0.1mm</h3>
+                            <div class="date">04 <span>Tháng 09</span></div>
+                            <p>Nhằm đáp ứng cho yêu cầu của một đơn hàng đặc biệt từ Khách hàng, ASUZAC đã tiến hành
+                                nghiên cứu phương thức sản xuất sản phẩm Ceramics với độ dày chỉ 0.1mm.</p>
+                        </div>
+
+                    </div>
+                    <div class="row news-content" style="border-bottom: none;">
+                        <div class="col-md-4 news-img">
+                            <img src="./images/news/dsc00341.jpg" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Sản xuất thành công sản phẩm Fine Ceramic dày 0.1mm</h3>
+                            <div class="date">04 <span>Tháng 09</span></div>
+                            <p>Nhằm đáp ứng cho yêu cầu của một đơn hàng đặc biệt từ Khách hàng, ASUZAC đã tiến hành
+                                nghiên cứu phương thức sản xuất sản phẩm Ceramics với độ dày chỉ 0.1mm.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6 images">
+                    <h2>
+                        IMAGES
+                    </h2>
+                    <div class="row image">
+                        <div class="col-md-6 image-left">
+                            <img src="./images/upload/1207AS_0269.jpg" alt="">
+                        </div>
+                        <div class="col-md-6 image-left">
+                            <img src="./images/upload/1207AS_0273.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row image">
+                        <div class="col-md-6 image-left">
+                            <img src="./images/upload/1207AS_0221.jpg" alt="">
+                        </div>
+                        <div class="col-md-6 image-left">
+                            <img src="./images/upload/1207AS_0294.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- THESE ACHIEVEMENTS -->
+    <!-- <div class="container">
+    <div class="row row-archievement">
+        <h3>THESE ACHIEVEMENTS</h3>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>
+                        Thành lập từ năm 2000, chúng tôi có hơn 15 năm tại Việt Nam
+                        và 40 năm hoạt động trên toàn thế giới về ngành hàng gốm sứ công nghiệp Fine Ceramic.
+                         ASUZAC sở hữu những thiết bị tối tân đáp ứng được tất cả những nhu cầu khắt khe của khách hàng. ASUZAC áp dụng tiêu chuẩn ISO 9001 và ISO 14001 vào sản xuất
+                         phối hợp hài hòa giữa chất lượng sản phẩm, ích lợi của công ty và sự thân thiện đối với môi trường xung quanh.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class='row'>
+                        <div class='col-md-12'>
+                          <div class="carousel slide media-carousel" id="media">
+                            <div class="carousel-inner">
+                              <div class="item  active">
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    <a class="thumbnail" href="#"><img alt="" src="./images/thanh-tuu/cta2-img.jpg" style="width:100%"></a>
+                                  </div>          
+                                  <div class="col-md-4">
+                                    <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                                  </div>        
+                                </div>
+                              </div>
+                              <div class="item">
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                                  </div>          
+                                  <div class="col-md-4">
+                                    <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                                  </div>        
+                                </div>
+                              </div>
+                              <div class="item">
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                                  </div>          
+                                  <div class="col-md-4">
+                                    <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                                  </div>      
+                                </div>
+                              </div>
+                            </div>
+                            <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+                            <a data-slide="next" href="#media" class="right carousel-control">›</a>
+                          </div>                          
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+    <!-- footer asuzac -->
+    <div class="container-fluid footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 information">
+                    <h3>
+                        Company information
+                    </h3>
+                    <ul>
+                        <li class="maps"><i class="fa fa-map-marker"></i>
+                            No. 37, Street 6, Vietnam Singapore Industrial Park, Thuan An City, Binh Duong
+                            Province,Vietnam </li>
+                        <li>
+                            <i class="fa fa-fax"></i> Phone: +84-274-3782722
+                        </li>
+                        <li> <i class="fa fa-envelope-o"></i> Email: info@asuzac.com.vn</li>
+                        <li class="logo"> <img src="./images/logo/LOGO ASUZAC-01.png" alt=""></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 operation">
+                    <h3> AREA OF OPERATION</h3>
+                    <ul>
+                        <li class="li1">MULTI-DIFFERENT PRODUCTS</li>
+                        <li class="li2">LIQUID SCREEN</li>
+                        <li class="li3">WAFER TRANSFER</li>
+                        <li class="li4">OPTICAL SCREEN</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 singup">
+                    <h3>SIGN UP FOR</h3>
+                    <ul>
+                        <li class="maps">Chúng tôi sẵn sàng cho mọi yêu cầu từ khách hàng, dù là nhỏ nhất với 1 sản phẩm
+                            duy nhất</li>
+                        <li>
+                            <div class="row">
+                                <form action="">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" id="inputSuccess">
+                                        <span class="glyphicon glyphicon-send form-control-feedback"
+                                            style="margin-right: 10px;color: black;"></span>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- copyrigter -->
+    <div class="container-fluid copyright">
+        <p>© Bản quyền thuộc về ASUZAC | Cung cấp bởi ASUZAC</p>
+    </div>
+    <script src="./javacript/cart.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+      <script src="./animate/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>
+        /* Initiate Magnify Function
+        with the id of the image, and the strength of the magnifier glass:*/
+        magnify("myimage", 3);
+    </script>
+</body>
+
+</html>
